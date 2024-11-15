@@ -1,15 +1,45 @@
 {
-  "dependencies": {
-    "typescript": "^5.6.3"
-  },
   "name": "quick-tools",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "",
+  "keywords": [
+    "tools",
+    "utils",
+    "common"
+  ],
+  "respository": {
+    "type": "git",
+    "url": "https://github.com/loveverse/quick-tools.git"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "main": "index.ts",
+  "files": [
+    "utils",
+    "components"
+  ],
+  "browser": "dist/index.ts",
+  "scripts": {
+    "copy": "cp package.json README.md dist",
+    "build": "rollup -c && npm run copy",
+    "dev": "rollup -c -w",
+    "publish": "node script/publish.js"
+  },
+  "author": "loveverse",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.9.0",
+    "commander": "^12.1.0",
+    "cross-env": "^7.0.3",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.26.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "shelljs": "^0.8.5",
+    "typescript": "^5.6.3"
+  }
 }
