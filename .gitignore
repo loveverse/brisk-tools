@@ -21,6 +21,6 @@ build.zip
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+scripts
 # Lock-files
 package-lock.json

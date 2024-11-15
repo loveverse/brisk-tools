@@ -1,8 +1,10 @@
+import { PlatformInfo } from "./types";
+
 /**
  * @description 获取操作系统信息
  * @returns {{osName: string, osVersion: string, platform: string}}
  */
-const getOsParams = (): PlatformInfo => {
+export const getOsParams = (): PlatformInfo => {
   const userAgent = navigator.userAgent.toLowerCase();
   let name = "Unknown";
   let version = "Unknown";
@@ -56,4 +58,34 @@ const getOsParams = (): PlatformInfo => {
     osVersion: version,
     platform: /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? "mobile" : "pc",
   };
+};
+
+/**
+ * isBrowser
+ * 检测代码是否运行在浏览器环境
+ */
+
+export const isBrowser: boolean = typeof window === "object" && typeof document === "object";
+
+/**
+ * 获取cookie
+ * new RegExp(`(^| )${name}=([^;]*)(;|$)`) 匹配 name=value 值
+ * @param name[可选] cookie名称
+ * @returns {Array | string | undefined}
+ */
+
+export const getCookie = (name?: string): Array<string> | string | undefined => {
+  // Environmental Test
+  if (!isBrowser) throw new Error("Non-browser environment, unavailable 'getCookie'");
+
+  if (!document.cookie) throw new Error("No Cookie Found");
+
+  if (name) {
+    const reg = new RegExp(`(^| )${name}=([^;]*)(;|$)`);
+    const arr = document.cookie.match(reg);
+    return arr ? arr[2] : undefined;
+  }
+
+  // Get Cookies && String => Array
+  return document.cookie.split(";");
 };
