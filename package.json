@@ -11,9 +11,9 @@
     "type": "git",
     "url": "https://github.com/loveverse/quick-tools.git"
   },
-  "main": "lib/index.min.js",
-  "module": "lib/index.min.mjs",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.min.js",
+  "module": "dist/index.min.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "es",
@@ -24,9 +24,8 @@
   },
   "browser": "dist/index.ts",
   "scripts": {
-    "copy": "cp package.json README.md dist",
-    "build": "rimraf lib && rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rimraf dist && rollup -c"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

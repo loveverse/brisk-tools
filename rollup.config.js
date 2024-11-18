@@ -9,7 +9,7 @@ import terser from "@rollup/plugin-terser";
 import pkg from "./package.json";
 
 const extensions = [".ts"];
-const dir = "lib";
+const dir = "dist";
 const resolve = (...args) => path.resolve(...args);
 
 const config = [
