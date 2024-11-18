@@ -9,7 +9,7 @@
   ],
   "respository": {
     "type": "git",
-    "url": "https://github.com/loveverse/quick-tools.git"
+    "url": "https://github.com/loveverse/brisk-tools.git"
   },
   "main": "dist/index.min.js",
   "module": "dist/index.min.mjs",
@@ -20,7 +20,7 @@
     "lib"
   ],
   "bugs": {
-    "url": "https://github.com/loveverse/quick-tools/issues"
+    "url": "https://github.com/loveverse/brisk-tools/issues"
   },
   "browser": "dist/index.ts",
   "scripts": {

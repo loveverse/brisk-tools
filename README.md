@@ -19,7 +19,7 @@ pnpm add brisk-tools
 
 ```bash
 # clone
-git clone git@github.com:loveverse/quick-tools.git
+git clone git@github.com:loveverse/brisk-tools.git
 
 # enter
 cd brisk-tools
@@ -30,4 +30,4 @@ pnpm/npm/yarn install
 
 ## bug
 
-[Issues · brisk-tools](https://github.com/loveverse/quick-tools/issues)
+[Issues · brisk-tools](https://github.com/loveverse/brisk-tools/issues)
